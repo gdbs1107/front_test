@@ -11,9 +11,9 @@ const DEFAULT_TASKS = [
     done: false,
   },
   {
-    id: "pages",
-    title: "Pages 워크플로 배포",
-    description: "main 브랜치 push 후 자동 배포를 확인합니다.",
+    id: "vercel",
+    title: "Vercel 프로젝트 연결",
+    description: "Git 연동 후 main 브랜치 자동 배포를 확인합니다.",
     done: false,
   },
   {
@@ -25,9 +25,9 @@ const DEFAULT_TASKS = [
 ];
 
 const NOTES = [
-  "정적 사이트는 빠르게 만들고, 배포 파이프라인은 단단하게.",
+  "Vercel은 나중에 커스텀 도메인을 붙이기 쉽습니다.",
   "작게 배포하고 자주 배포하는 습관이 속도를 만듭니다.",
-  "한 번의 성공적인 배포가 다음 프로젝트의 기준이 됩니다.",
+  "첫 배포가 끝나면 브랜치 전략과 릴리즈 규칙을 정리하세요.",
 ];
 
 function loadTasks() {
