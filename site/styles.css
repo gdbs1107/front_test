@@ -1,5 +1,5 @@
 :root {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Noto Sans KR", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #0f172a;
   background: #f8fafc;
 }
@@ -10,22 +10,120 @@
 
 body {
   margin: 0;
+  background: radial-gradient(circle at top right, #dbeafe, #f8fafc 40%);
 }
 
 .container {
-  max-width: 720px;
-  margin: 64px auto;
+  max-width: 760px;
+  margin: 56px auto;
   padding: 0 20px;
+  display: grid;
+  gap: 16px;
 }
 
 .card {
-  background: white;
+  background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
-h1 {
+.hero h1 {
+  margin: 8px 0 10px;
+}
+
+.badge {
+  margin: 0;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #dbeafe;
+  color: #1e3a8a;
+}
+
+.muted {
+  margin: 6px 0 0;
+  color: #475569;
+}
+
+.progress-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.progress-row h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 10px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb, #0ea5e9);
+  transition: width 180ms ease;
+}
+
+.task-list {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.task {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.task.done strong {
+  color: #0f766e;
+}
+
+.toggle-btn {
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: #0f172a;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  opacity: 0.92;
+}
+
+.note h2 {
   margin-top: 0;
+}
+
+@media (max-width: 640px) {
+  .container {
+    margin: 28px auto;
+    padding: 0 14px;
+  }
+
+  .task {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
